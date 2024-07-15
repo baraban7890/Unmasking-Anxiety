@@ -7,6 +7,15 @@ Michael Nicholas
 
 Dataset: https://catalog.data.gov/dataset/indicators-of-anxiety-or-depression-based-on-reported-frequency-of-symptoms-during-last-7-
 
+Notes regarding data License and/or fair use restrictions:
+* Per web site, "this data is intended for public access and use."
+* Specific Licensing information: This data has been pulled from Data.gov and is provided through the US Department of Health and Human Services.  Specific restrictions may exist regarding use of text, trademarks, logos and images.  However, we have not duplicated any text, trademarks, logos or images in this project.
+
+### Project Overview
+
+### Usage and Installation Instructions
+
+### Examples of Application and/or Results - Summary of Analysis
 
 Insights:
 
