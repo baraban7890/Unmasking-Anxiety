@@ -12,6 +12,12 @@ Notes regarding data License and/or fair use restrictions:
 * Specific Licensing information: This data has been pulled from Data.gov and is provided through the US Department of Health and Human Services.  Specific restrictions may exist regarding use of text, trademarks, logos and images.  However, we have not duplicated any text, trademarks, logos or images in this project.
 
 ### Project Overview
+Using data from the US Department of Health and Human Services, this project aims to evaluate the frequency of weekly reported symptoms of anxiety since 2020, across multiple demographic categories and subcategories.  
+
+The main objectives of the project include the following:
+1. Evaluate trends within specific sub-categories of the population to support or challenge the theory that the COVID-19 lockdown had varying impacts on mental health distress across different groups.
+2. Identify and analyze other potential causes of anxiety, such as holidays and seasonal changes, if applicable.  Ultimately, identify any interpret specific findings or correlations within the time series data that may lead to insights for the user of the data.
+3. Provide insights to client for use in evaluating key needs within the industry to plan resources to support the mental health needs of various demographic groups.
 
 ### Usage and Installation Instructions
 
