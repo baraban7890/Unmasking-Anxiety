@@ -48,3 +48,7 @@ Potential Bias:
 End Goal:  
 Our end goal in this project is to predict whether or not a group may be at risk for depressive or anxiety symptoms.  
 Provide insights to potential clients so they may either cut back or allocate more of their budget to mental health resources based on these predictions.
+
+
+AT RISK GROUPS:
+- 18-29
