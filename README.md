@@ -58,8 +58,8 @@ python analysis.py
 Generate Reports:
 The results and insights will be saved in the output/ directory.
 
-Jupyter Notebook:
-You can explore the data and analysis by running the Jupyter notebook:
+Google Collab:
+You can explore the data and analysis by running the Google Collab:
 
 bash
 Copy code
@@ -79,7 +79,7 @@ Our analysis focused on understanding the trends and causes of anxiety symptoms 
 * Differences across age groups, gender, and race.
 * Impact of time periods during and after lockdown.
 
-## Data License and Fair Use**
+## Data License and Fair Use
 * This data is intended for public access and use, as per the website.
 * The data has been sourced from Data.gov and provided through the US Department of Health and Human Services. Specific restrictions may exist regarding the use of text, trademarks, logos, and images, which have not been duplicated in this project.
 
@@ -102,25 +102,81 @@ The project's ultimate goal is to predict whether a group may be at risk for dep
 ## Data Description
 The dataset used for this project is sourced from the US Department of Health and Human Services and contains indicators of anxiety or depression based on reported frequency of symptoms during the last seven days. Key features include:
 
-* **Indicator** _Symptoms of Anxiety Disorder_, 
-* **Subgroup:** Demographic subgroups (age, gender, race, state, ).
-* **Anxiety Frequency:** The reported frequency of anxiety symptoms.
-* **Depression Frequency:** The reported frequency of depression symptoms.
-* **Weighted Percentage:** The weighted percentage of respondents reporting symptoms.
+* **Indicator** _Symptoms of Anxiety Disorder; Symptoms of Depressive Disorder; Symptoms of Anxiety Disorder or Depressive Disorder_
+* **Group:** 
+    * **National Estimate:** _United States_
+    * **By Age:** _12 - 29 Years; 30 - 39 Years; 40 - 49 Years; 50 - 59 Years; 70 - 79 Years; 80 Years and Above_
+    * **By Sex:** _Female; Male_
+    * **By Gender Identity:** _Cis-gender Male; Cis-gender Female; Transgender_
+    * **By Sexual Orientation:** _Gay or Lesbian; Straight; Bisexual_
+    * **By Race/Hispanic Ethnicity:** _Hispanic or Latino; Non-Hispanic Asian single race; Non-Hispanic Black, single race; Non-Hispanic White, single race; Non-Hispanic other races and multiple races_
+    * **By Education:** _Less than a High School Diploma; High School Diploma or GED; Some College/Assiciate's Degree; Bachelor's Degree or Higher_
+    * **By Disability Status:** _With Disability; Without Disability_
+
 
 ## Methodology
-Overview of the analysis process, tools, and techniques used:
+Our methodology consisted of several key steps:
 
-## Data cleaning and preprocessing
-Feature engineering
-Statistical analysis
-Machine learning models
-Validation methods
-Results
-Detailed findings with visualizations such as charts, graphs, and tables to illustrate key points.
+**1. Data Cleaning and Preprocessing:** Ensured the data was clean and ready for analysis.\
+**2. Feature Engineering:** Created new features to enhance the predictive power of our models.\
+**3. Exploratory Data Analysis (EDA):** Gained initial insights and visualized trends.\
+**4. Model Training and Evaluation:** Trained machine learning models to predict at-risk groups and evaluated their performance.\
+
+### Data Cleaning and Preprocessing
+**1. Missing Values:** Handled missing values by imputation or removal.\
+**2. Date Handling:** Converted date columns to datetime objects and created additional time-related features (e.g., month, day, year).\
+**3. Normalization:** Scaled numeric features to ensure consistent model performance.\
+**4. Categorical Encoding:** Converted categorical variables to numerical format using techniques such as one-hot encoding.\
+
+## Results
+### Descriptive Statistics
+Our initial analysis involved calculating descriptive statistics to understand the distribution of anxiety symptoms across different demographic groups. Key findings include:
+
+* **Average Anxiety Levels:** The average reported frequency of anxiety symptoms was higher among younger adults (18-29) and females.
+* **Variation Across Subgroups:** Significant variation was observed across different subgroups, with minorities and lower-income groups reporting higher levels of anxiety.
+
+### Time Series Analysis
+We performed a time series analysis to identify trends and patterns in anxiety symptoms over time:
+
+* **Impact of COVID-19 Lockdown:** A noticeable spike in anxiety levels was observed during the initial months of the COVID-19 lockdown, followed by a gradual decline but remaining elevated compared to pre-lockdown levels.
+* **Seasonal Trends:** Anxiety levels showed seasonal variations, with peaks around holidays and significant events.
+
+### Correlation Analysis
+To explore the relationships between anxiety levels and potential influencing factors, we conducted a correlation analysis:
+
+* **Age and Gender:** Strong positive correlations were found between anxiety levels and younger age groups as well as females.
+* **Income and Education:** Lower income and education levels were also positively correlated with higher anxiety symptoms.
+
+### Predictive Modeling
+We employed various machine learning models to predict groups at risk for anxiety symptoms. The model used:
+
+* **Prophet**
+
+### Visualizations
+To aid in the interpretation of our findings, we generated several visualizations:
+
+**Anxiety Levels Over Time**
+
+**Anxiety by Age Group**
+
+**National Estimate**
+
+### Key Insights
+**1. Younger Adults and Females at Higher Risk:** Targeted interventions should be directed towards these groups.\
+**2. Seasonal Interventions Needed:** Increased mental health support during holidays and significant events can help mitigate anxiety spikes.\
+**3. Economic and Educational Support:** Providing resources and support to lower-income and less-educated groups can help address higher anxiety levels in these populations.
 
 ## Conclusion and Recommendations
-Summary of insights gained from the analysis and actionable recommendations for stakeholders.
+### Conclusion
+Our analysis indicates that the COVID-19 lockdown had a significant impact on anxiety levels across various demographic groups. Key findings include:
+
+* Younger adults (18-29) and females reported higher levels of anxiety.
+* Seasonal variations and specific time periods (e.g., holidays) showed spikes in anxiety symptoms.
+
+### Recommendations
+* **Resource Allocation:** Mental health resources should be prioritized for younger adults and females, especially during peak anxiety periods.
+* **Public Health Interventions:** Develop targeted interventions during holidays and significant dates to mitigate anxiety spikes.
+* **Further Research:** Continue monitoring anxiety trends to understand long-term effects and emerging patterns.
 
 ## Contributors
 * Alexander Baraban
@@ -128,11 +184,16 @@ Summary of insights gained from the analysis and actionable recommendations for 
 * Michael Nicholas
 
 ## Acknowledgments
-Thank any individuals or organizations that contributed to the project.
+We would like to thank the following individuals and organizations for their support and contributions to this project:
+
+* **Northwestern AI Bootcamp Instructors:** For their guidance and feedback.
+* **US Department of Health and Human Services:** For providing the dataset.
+* **Data.gov:** For making the data accessible to the public.
+* **Our Families and Friends:** For their continuous support and encouragement.
 
 ## Contact Information
 For questions or collaborations, please contact:
 
-**Alexander Baraban** - alexbaraban17@gmail.com
-**Ryan Hough** - hough.ryanj@gmail.com
-**Michael Nicholas** - mpnicholas21@gmail.com
+**Alexander Baraban** - alexbaraban17@gmail.com\
+**Ryan Hough** - hough.ryanj@gmail.com\
+**Michael Nicholas** - mpnicholas21@gmail.com\
