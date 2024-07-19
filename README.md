@@ -1,4 +1,4 @@
-# Unmasking Anxiety: The hidden groups of anxiety and depression since 2020
+# Unmasking Anxiety: Predicting at-risk groups for symptoms of anxiety and depression.
 
 ## Table of Contents
 1. Project Overview
@@ -69,10 +69,9 @@ jupyter notebook analysis.ipynb
 ### Analysis 
 Our analysis focused on understanding the trends and causes of anxiety symptoms since the COVID-19 lockdown. We performed the following steps:
 
-* **Descriptive Statistics:** Calculated mean, median, and standard deviation of anxiety symptoms across different demographic groups.
-* **Time Series Analysis:** Analyzed trends over time, focusing on periods during and after the lockdown.
-* **Correlation Analysis:** Examined relationships between anxiety levels and potential influencing factors such as age, gender, and race.
-* **Predictive Modeling:** Used machine learning models to predict groups at risk for anxiety symptoms.
+* **Descriptive Statistics:** Calculated means and differences of means for both depressive and anxiety symptoms across different demographic groups.
+* **Time Series Analysis:** Analyzed trends over time starting from 2020 to predict a year into the future.
+* **Predictive Modeling:** Used Meta Prophet to predict groups at risk for anxiety symptoms.
 
 ### Insights
 * Seasonal variations in anxiety symptoms.
@@ -94,18 +93,18 @@ The project's ultimate goal is to predict whether a group may be at risk for dep
 
 ## At-Risk Groups
 * **By Age:** 18-29
-* **By Gender Identity:** Transgrender
+* **By Gender Identity:** Transgender
 * **By Disability Status:** With Disability
 * **By Sexual Orientation:** Bi-Sexual
 * **By Race:** Non-Hispanic, other races and multiple races
 
 ## Data Description
-The dataset used for this project is sourced from the US Department of Health and Human Services and contains indicators of anxiety or depression based on reported frequency of symptoms during the last seven days. Key features include:
+The dataset used for this project is sourced from the US Department of Health and Human Services and contains indicators of anxiety or depression based on the respondent answering questions about their last 7 days. Based on their responses, they either exhibit symptoms of Anxiety or Depressive disorder or they don't. Key features include:
 
-* **Indicator** _Symptoms of Anxiety Disorder; Symptoms of Depressive Disorder; Symptoms of Anxiety Disorder or Depressive Disorder_
+* **Indicator** _Symptoms of Anxiety Disorder; Symptoms of Depressive Disorder; Symptoms of Anxiety Disorder or Depressive Disorder_ (We narrowed this down to only Symptoms of Anxiety Disorder or Depressive Disorder)
 * **Group:** 
     * **National Estimate:** _United States_
-    * **By Age:** _12 - 29 Years; 30 - 39 Years; 40 - 49 Years; 50 - 59 Years; 70 - 79 Years; 80 Years and Above_
+    * **By Age:** _18 - 29 Years; 30 - 39 Years; 40 - 49 Years; 50 - 59 Years; 70 - 79 Years; 80 Years and Above_
     * **By Sex:** _Female; Male_
     * **By Gender Identity:** _Cis-gender Male; Cis-gender Female; Transgender_
     * **By Sexual Orientation:** _Gay or Lesbian; Straight; Bisexual_
@@ -118,34 +117,22 @@ The dataset used for this project is sourced from the US Department of Health an
 Our methodology consisted of several key steps:
 
 **1. Data Cleaning and Preprocessing:** Ensured the data was clean and ready for analysis.\
-**2. Feature Engineering:** Created new features to enhance the predictive power of our models.\
-**3. Exploratory Data Analysis (EDA):** Gained initial insights and visualized trends.\
-**4. Model Training and Evaluation:** Trained machine learning models to predict at-risk groups and evaluated their performance.\
+**2. Exploratory Data Analysis (EDA):** Gained initial insights and visualized trends.\
 
 ### Data Cleaning and Preprocessing
-**1. Missing Values:** Handled missing values by imputation or removal.\
-**2. Date Handling:** Converted date columns to datetime objects and created additional time-related features (e.g., month, day, year).\
-**3. Normalization:** Scaled numeric features to ensure consistent model performance.\
-**4. Categorical Encoding:** Converted categorical variables to numerical format using techniques such as one-hot encoding.\
+**1. Missing Values:** Handled missing values by removing rows that had the "Value" column missing.\
+**2. Date Handling:** Converted date columns to DateTime objects.\
 
 ## Results
 ### Descriptive Statistics
 Our initial analysis involved calculating descriptive statistics to understand the distribution of anxiety symptoms across different demographic groups. Key findings include:
 
-* **Average Anxiety Levels:** The average reported frequency of anxiety symptoms was higher among younger adults (18-29) and females.
-* **Variation Across Subgroups:** Significant variation was observed across different subgroups, with minorities and lower-income groups reporting higher levels of anxiety.
+* **Average Anxiety Levels:** The average reported frequency of depressive and anxiety symptoms was higher among younger adults (18-29) and females.
 
 ### Time Series Analysis
 We performed a time series analysis to identify trends and patterns in anxiety symptoms over time:
 
-* **Impact of COVID-19 Lockdown:** A noticeable spike in anxiety levels was observed during the initial months of the COVID-19 lockdown, followed by a gradual decline but remaining elevated compared to pre-lockdown levels.
-* **Seasonal Trends:** Anxiety levels showed seasonal variations, with peaks around holidays and significant events.
-
-### Correlation Analysis
-To explore the relationships between anxiety levels and potential influencing factors, we conducted a correlation analysis:
-
-* **Age and Gender:** Strong positive correlations were found between anxiety levels and younger age groups as well as females.
-* **Income and Education:** Lower income and education levels were also positively correlated with higher anxiety symptoms.
+* **Seasonal Trends:** Anxiety levels showed seasonal variations, with peaks around holidays, significant events, and winter.
 
 ### Predictive Modeling
 We employed various machine learning models to predict groups at risk for anxiety symptoms. The model used:
@@ -164,7 +151,7 @@ To aid in the interpretation of our findings, we generated several visualization
 ### Key Insights
 **1. Younger Adults and Females at Higher Risk:** Targeted interventions should be directed towards these groups.\
 **2. Seasonal Interventions Needed:** Increased mental health support during holidays and significant events can help mitigate anxiety spikes.\
-**3. Economic and Educational Support:** Providing resources and support to lower-income and less-educated groups can help address higher anxiety levels in these populations.
+**3. Economic and Educational Support:** Providing resources and support to less-educated groups can help address higher anxiety levels in these populations.
 
 ## Conclusion and Recommendations
 ### Conclusion
