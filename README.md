@@ -88,7 +88,7 @@ Our analysis focused on understanding the trends and causes of anxiety symptoms 
 * **Single Respondent per Housing Unit:** Potential bias from only one respondent per unit.
 
 ## End Goal
-The project's ultimate goal is to predict whether a group may be at risk for depressive or anxiety symptoms and provide insights to potential clients for resource allocation in mental health services.
+The project's ultimate goal is to predict whether a group may be at risk for depressive or anxiety symptoms and provide insights to potential clients for resource allocation in mental health services.  At risk is being defined as having a significantly higher predicted symptom rate than the national average
 
 ## At-Risk Groups
 * **By Age:** 18-29
@@ -133,7 +133,10 @@ Our initial analysis involved calculating descriptive statistics to understand t
 We performed a time series analysis to identify trends and patterns in anxiety symptoms over time:
 
 * **Impact of COVID-19 Lockdown:** A noticeable spike in anxiety levels was observed during the initial months of the COVID-19 lockdown, followed by a gradual decline but remaining elevated compared to pre-lockdown levels.
-* **Seasonal Trends:** Anxiety levels showed seasonal variations, with peaks around holidays and significant events.
+
+![alt text](image-2.png)
+* **Seasonal Trends:** Anxiety levels showed seasonal variations, with peaks around Summer season (July) and leading into holidays (November).
+![alt text](image.png)
 
 ### Predictive Modeling
 We employed various machine learning models to predict groups at risk for anxiety symptoms. The model used:
@@ -153,9 +156,11 @@ To aid in the interpretation of our findings, we generated several visualization
 
 **Reported Anxiety and Depressive Symptoms by Gender**
 
-**Reported Anxiety and Depressive Symptoms by Age Group**
+**Reported Anxiety and Depressive Symptoms by Sexual Identity**
 
 **Reported Anxiety and Depressive Symptoms by Gender Identity**
+
+**Reported Anxiety and Depressive Symptoms with or without disabilities**
 
 **Reported Anxiety and Depressive Symptoms National Estimate**
 
@@ -171,11 +176,16 @@ Our analysis indicates that the COVID-19 lockdown had a significant impact on an
 
 * Younger adults (18-29) and females reported higher levels of anxiety.
 * Seasonal variations and specific time periods (e.g., holidays) showed spikes in anxiety symptoms.
+* The top 5 "At-Risk" demographic groups include Transgender, With Disabilities, Bi-Sexual, 18-29 and Non-Hispanic other races or multiple race individuals.
 
-### Recommendations
+### Recommendations and Next Steps (For a Health Care Group focused on providing Mental Health Services)
 * **Resource Allocation:** Mental health resources should be prioritized for younger adults and females, especially during peak anxiety periods.
 * **Public Health Interventions:** Develop targeted interventions during holidays and significant dates to mitigate anxiety spikes.
 * **Further Research:** Continue monitoring anxiety trends to understand long-term effects and emerging patterns.
+* **Refocus Media Advertising:** From Covid-19 Resources to At-Risk Groups
+* **Provide on-site Awareness:** With targeted campaigns to educated At-Risk groups of Services Available, i.e. Colleges, Universities, LGBTQ organizations, etc.
+* **Affordable Mental Health Sevice options:** Educate target at-risk groups of potential free or reduced cost options, such as government programs, employer EAP plans, Health Insurance coverage, etc.
+* **Proximity:** Establish office space near "At Risk" regions. 
 
 ## Contributors
 * Alexander Baraban
